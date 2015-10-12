@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dogs</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>List of Dogs</h1>
+    <p>This is the home page with a list of all dogs</p>
+    <p><a href="/dogs/new">Add Dog </a></p>
+    <% allDogs.forEach(function(dog){ %>
+      <h2><%= dog.dogName %></h2>
+      <p><%= dog.dogBreed %></p>
+      <p><%= dog.dogAge %></p>
+      <p><a href="/dogs/<%= dog._id %>/edit">Edit Dog</a></p>
+   <%  }) %>
+  </body>
+</html>
